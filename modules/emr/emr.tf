@@ -81,12 +81,6 @@ resource "aws_emr_cluster" "cluster" {
   security_configuration = "${aws_emr_security_configuration.security_configuration.name}"
   configurations = "${data.template_file.configuration.rendered}"
 
-
-  bootstrap_action {
-    path = "${var.bootstrap_script_s3_object}"
-    name = "configure_system"
-  }
-
   lifecycle {
     create_before_destroy = true
   }

@@ -26,6 +26,6 @@ output "service_role" {
     value = "${aws_iam_role.emr_service_role.id}"
 }
 
-output "var.autoscaling_role" {
+output "autoscaling_role" {
   value = "${aws_iam_role.autoscaling_role.id}"
 }
