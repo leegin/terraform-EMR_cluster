@@ -8,7 +8,7 @@ variable "cidr_blocks" {}
 
 variable "sg_name" {}
 
-varaible "cluster_identifier" {}
+variable "cluster_identifier" {}
 
 variable "database_name" {}
 

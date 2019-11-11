@@ -13,7 +13,7 @@ resource "aws_security_group" "emr_master" {
 
   ingress {
       from_port   = "${var.ingress_fromport2}"
-      to_port     = "${var.ingress_toport2"
+      to_port     = "${var.ingress_toport2}"
       protocol    = "TCP"
   }
 
@@ -49,7 +49,7 @@ resource "aws_security_group" "emr_slave" {
 
   ingress {
       from_port   = "${var.ingress_fromport2}"
-      to_port     = "${var.ingress_toport2"
+      to_port     = "${var.ingress_toport2}"
       protocol    = "TCP"
   }
 

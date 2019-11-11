@@ -18,11 +18,12 @@ resource "aws_iam_role" "redshift_role" {
   ]
 }
 EOF
-}
-tags = {
+
+  tags {
     name = "redshift-role"
   }
 }
+
 resource "aws_iam_role_policy" "redshift_role_policy" {
    name = "redshift_role_policy"
    role = "${aws_iam_role.redshift_role.id}"

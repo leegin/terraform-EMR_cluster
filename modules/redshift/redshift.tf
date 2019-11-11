@@ -9,4 +9,4 @@ resource "aws_redshift_cluster" "Redshift_cluster" {
   skip_final_snapshot = true
   iam_roles = "${var.redshift_role}"
   }
-}
+

@@ -37,6 +37,13 @@ module "emr-sg" {
 module "emr-iam" {
   source = "./modules/network"
   cluster_name = "EMR-CLUSTER"
+  ingress_fromport1 = "0"
+  ingress_toport1 = "0"
+  ingress_fromport2 = "8443"
+  ingress_toport2 = "8443"
+  egress_fromport1 = "0"
+  engress_toport1 = "0"
+  tenancy = "default"
 }
 
 ################
@@ -125,4 +132,9 @@ module "Redshift-cluster" {
   cluster_type = "single-node"
   subnet_id = "${module.network.subnet_id}"
   redshift_role = "${module.redshift.redshift_role}"
+  sg_name = "Redshift-sg"
+  vpc_id = "${module.network.vpc_id}"
+  redshift-fromport = "5439"
+  redshift-toport = "5439"
+  cidr_blocks = "10.0.2.0/24"
 }
