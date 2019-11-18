@@ -6,7 +6,7 @@ resource "aws_default_security_group" "redshift_security_group" {
     protocol    = "tcp"
     cidr_blocks = "${var.cidr_blocks}"
   }
-  tags {
+  tags= {
     name = "${var.sg_name}"
   }
 }

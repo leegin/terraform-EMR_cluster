@@ -46,3 +46,7 @@ variable "zeppelin_port" {}
 variable "zeppelin_keystore_password" {}
 
 variable "bootstrap_script_s3_object" {}
+
+variable "autoscaling_role" {}
+
+variable "service_role" {}

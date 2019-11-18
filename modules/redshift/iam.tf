@@ -19,7 +19,7 @@ resource "aws_iam_role" "redshift_role" {
 }
 EOF
 
-  tags {
+  tags= {
     name = "redshift-role"
   }
 }

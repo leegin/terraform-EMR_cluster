@@ -71,7 +71,7 @@ resource "aws_emr_cluster" "cluster" {
     autoscaling_policy = "${data.template_file.autoscaling_policy.rendered}"
   }
 
-  tags {
+  tags= {
     Name        = "${var.cluster_name}"
     Region      = "${var.region}"
   }

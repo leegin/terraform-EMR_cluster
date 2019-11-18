@@ -28,7 +28,7 @@ resource "aws_security_group" "emr_master" {
     ignore_changes = ["ingress", "egress"]
   }
 
-  tags {
+  tags= {
     name        = "sg-emr_Master"
   }
 }
@@ -64,7 +64,7 @@ resource "aws_security_group" "emr_slave" {
     ignore_changes = ["ingress", "egress"]
   }
 
-  tags {
+  tags= {
     name        = "sg-emr_Slave"
   }
 }

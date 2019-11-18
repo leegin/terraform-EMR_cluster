@@ -4,7 +4,7 @@ resource "aws_vpc" "main" {
     enable_dns_hostnames = true
     enable_dns_support = true
 
-    tags {
+    tags= {
         Name = "EMR_VPC"
     }
 }
@@ -13,7 +13,7 @@ resource "aws_subnet" "emr-subnet" {
     vpc_id            = "${var.vpc_id}"
     cidr_block        = "${var.subnet_cidr}"
 
-    tags {
+    tags= {
         Name = "EMR_subnet"
     }
 }
